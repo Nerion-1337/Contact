@@ -1,0 +1,29 @@
+//
+// THEME
+//
+[data-theme="dark"]{
+    --C1: #111111;
+    --C2: #ffffff;
+    --C3: #9290904d;
+    --C4: #00000050;
+    --C5: #000000;    
+    --C6: #d6d4d4;
+    --C7: #6d071a;
+    --C8: #111111;
+    --ICON: url(../assets/icon-st-b.svg);
+}
+
+[data-theme="light"]{
+    --C1: #d6d4d4;
+    --C2: #000000;
+    --C3: #9290904d;
+    --C4: #ffffff30;
+    --C5: #ffffff;
+    --C6: #222;
+    --C7: #1a89ca;
+    --C8: #d6d4d4;
+    --ICON: url(../assets/icon-st-w.svg);
+}
+//
+// OTHER
+//

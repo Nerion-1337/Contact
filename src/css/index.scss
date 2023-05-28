@@ -1,0 +1,243 @@
+//
+//
+// HEADER
+//
+//
+header{
+    position: relative;
+    background: var(--C1);
+    width: 100vw;
+    height: clamp(100px, calc((200 / $Width) * 100vw), 200px);
+    display: flex;
+    justify-content: center;
+}
+header section{
+    width: clamp(300px, calc((1600 / $Width) * 100vw), 1600px);
+    height: clamp(100px, calc((200 / $Width) * 100vw), 200px);
+    display: flex;
+    justify-content: center;
+}
+header section .logo {
+    position: relative;
+    width: clamp(150px, calc((300 / $Width) * 100vw), 300px);
+    height: clamp(150px, calc((300 / $Width) * 100vw), 300px);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--C1);
+    z-index: 1;
+    top: clamp(30px, calc((50 / $Width) * 100vw), 50px);
+    overflow: hidden;
+}
+header section .logo::after {
+    content: "";
+    position: absolute;
+    background: var(--C6) ;
+    background-image: var(--ICON);
+    background-size: clamp(80px, calc((180 / $Width) * 100vw), 180px) clamp(80px, calc((180 / $Width) * 100vw), 180px);
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+    inset: clamp(5px, calc((15 / $Width) * 100vw), 15px);
+    border-radius: 50%;
+    z-index: 2;
+}
+header section .logo::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(20deg, var(--C2), var(--C7), var(--C7), var(--C2));
+    inset: -20px -5px;
+    animation: animate 8s linear infinite;
+}
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+//
+//
+// MAIN
+//
+//
+main{
+    position: relative;
+    background: var(--C6);
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 10px var(--C7), 0 0 20px var(--C7);
+    padding-bottom: clamp(10px, calc((50 / $Width) * 100vw), 50px);
+}
+
+main .listContact{
+    position: relative;
+    width: clamp(300px, calc((1000 / $Width) * 100vw), 1000px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 5px var(--C4);
+    border-radius: 5px;
+}
+.home{
+    @extend %center;
+}
+//
+//
+// TITLE CONTACT
+//
+//
+.titleContact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: clamp(110px, calc((200 / $Width) * 100vw), 200px);
+    margin-bottom: clamp(50px, calc((100 / $Width) * 100vw), 100px);
+}
+.titleContact .user{
+    word-spacing: clamp(10px, calc((50 / $Width) * 100vw), 50px);
+    animation: swap 12s ease-in-out infinite;
+}
+.titleContact .job{
+    word-spacing: clamp(2px, calc((10 / $Width) * 100vw), 10px);
+    animation: swap2 12s ease-in-out infinite;
+}
+@keyframes swap {
+    0% {
+        transform: translateY(0px);
+    }
+    10%,
+    40% {
+        transform: translateY(clamp(20px, calc((40 / $Width) * 100vw), 40px));
+        color: var(--C7);
+        font-size: clamp(8px, calc((25 / $Width) * 100vw), 25px);
+    }
+
+    50% {
+        transform: translateY(0px);
+        font-size: clamp(15px, calc((40 / $Width) * 100vw), 40px);
+        color: var(--C1);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes swap2 {
+    0% {
+        transform: translateY(0px);
+       
+    }
+    10%,
+    40% {
+        transform: translateY(clamp(-65px, calc((-65 / $Width) * 100vw), -15px));
+        color: var(--C1);
+        font-size: clamp(12px, calc((50 / $Width) * 100vw), 50px);
+    }
+    50% {
+        transform: translateY(0px);
+
+        font-size: clamp(8px, calc((25 / $Width) * 100vw), 25px);
+        color: var(--C7);
+    }
+
+    100% {
+        transform: translateY(0px);
+
+    }
+}
+//
+//
+// BOXCONTACT
+//
+//
+.boxContact{
+    width: 100%;
+    padding: clamp(20px, calc((50 / $Width) * 100vw), 50px);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--C4);
+    opacity: 1;
+    animation: animate3 2s ease-in-out forwards;
+    @for $i from 1 through 12 {
+        &:nth-child(#{$i}) {
+            animation-delay: 0.3s * $i;
+        }
+    }
+}
+
+@keyframes animate3 {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.boxContact .iconContact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-right: clamp(5px, calc((140 / $Width) * 100vw), 170px);
+    margin-left: clamp(5px, calc((40 / $Width) * 100vw), 50px);
+}
+
+.boxContact .iconContact span{
+    position: absolute;
+    top: clamp(40px, calc((90 / $Width) * 100vw), 90px);
+}
+
+.boxContact .title{
+    transition: .5s;
+    cursor: pointer;
+    &:hover{
+        letter-spacing: 0.3vw;
+    }
+}
+//
+//
+// POPUP
+//
+//
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: var(--C4) ;
+    opacity: 0;
+    z-index: -100;
+
+    @extend %center;
+}
+.popup.active{
+    opacity: 1;
+    z-index: 100;    
+}
+
+.popup div{
+    @extend %center;
+    flex-direction: column;
+    background: var(--C6);
+    border-radius: 10px;
+    padding: 
+    clamp(10px, calc((20 / $Width) * 100vw), 10px) 
+    clamp(30px, calc((60 / $Width) * 100vw), 60px) 
+    clamp(10px, calc((20 / $Width) * 100vw), 20px) 
+    clamp(30px, calc((60 / $Width) * 100vw), 60px);
+    gap: clamp(10px, calc((10 / $Width) * 100vw), 10px);
+    border: 1px solid var(--C4);  
+    transform: translateX(50px);
+    transition: .5s;
+}
+.popup.active div{
+    transform: translateX(0px);
+}

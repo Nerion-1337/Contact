@@ -1,0 +1,139 @@
+.type-btn1{
+    position: relative;
+    background: var(--C8);
+    color: var(--C6);
+    border-radius: 50%;
+    border: 2px solid var(--C6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .5s;
+    z-index: 1;
+    &::after{
+        content: "";
+        position: absolute;
+        background: var(--C6);
+        border-radius: 50%;
+        transform: scale(0);
+        transition: .5s;
+        z-index: -1;
+    }
+    &:hover{
+        color: var(--C8);
+    &::after{
+        transform: scale(1);
+        
+    }
+    }
+}
+.type-btn2{
+            position: relative;
+            background: var(--C6);
+            border-radius: clamp(6px, calc((10 / $Width) * 100vw), 10px);
+            @extend %center;
+            color: var(--C1);
+            border: solid 2px var(--C1);
+            cursor: pointer;
+            transition: 0.5s;
+            z-index: 1;
+            &::after {
+                content: "";
+                position: absolute;
+                background: var(--C1);
+                border-radius: 10px;
+                transform: scale(0);
+                transition: 0.5s;
+                z-index: -1;
+            }
+            &:hover {
+                color: var(--C6);
+            &::after {
+                transform: scale(1);
+                }
+            }
+}
+
+
+
+
+
+//
+//
+// SIZE
+//
+//
+$size-btn1: clamp(5px, calc((60 / $Width) * 100vw), 60px);
+$size-btn2: clamp(35px, calc((90 / $Width) * 100vw), 90px);
+$size-btn3: clamp(35px, calc((60 / $Width) * 100vw), 60px);
+$size-btn4: clamp(10px, calc((90 / $Width) * 100vw), 90px);
+$size-btn5: clamp(10px, calc((90 / $Width) * 100vw), 90px);
+.size-btn1{
+    width: $size-btn1;
+    height: $size-btn1;
+    &::after{
+        width: $size-btn1;
+        height: $size-btn1;
+    }
+}
+.size-btn2{
+    width: $size-btn2;
+    height: $size-btn2;
+    &::after{
+        width: $size-btn2;
+        height: $size-btn2;
+    }
+}
+.size-btn3{
+    width: $size-btn3;
+    height: $size-btn3;
+    &::after{
+        width: $size-btn3;
+        height: $size-btn3;
+    }
+}
+.size-btn4{
+    width: $size-btn4;
+    height: $size-btn4;
+    &::after{
+        width: $size-btn4;
+        height: $size-btn4;
+    }
+}
+.size-btn5{
+    width: $size-btn5;
+    height: $size-btn5;
+    &::after{
+        width: $size-btn5;
+        height: $size-btn5;
+    }
+}
+//
+//
+// FONT-SIZE
+//
+//
+.size-t1{
+    font-size: clamp(5px, calc((10 / $Width) * 100vw), 10px);
+}
+.size-t2{
+    font-size: clamp(5px, calc((15 / $Width) * 100vw), 15px);
+}
+.size-t3{
+    font-size: clamp(5px, calc((20 / $Width) * 100vw), 20px);
+}
+.size-t4{
+    font-size: clamp(5px, calc((25 / $Width) * 100vw), 25px);
+}
+.size-t5{
+    font-size: clamp(15px, calc((30 / $Width) * 100vw), 30px);
+}
+.size-t6{
+    font-size: clamp(15px, calc((40 / $Width) * 100vw), 40px);
+}
+.size-t7{
+    font-size: clamp(5px, calc((50 / $Width) * 100vw), 50px);
+}
+.size-t8{
+    font-size: clamp(5px, calc((60 / $Width) * 100vw), 60px);
+}
