@@ -68,7 +68,7 @@ input{
     white-space: nowrap;
     overflow: hidden;
     font-size: clamp(8px, calc((25 / $Width) * 100vw), 25px);
-    line-height: clamp(21px, calc(($LineH / $Width) * 100vw), calc($LineH * 1px));
+    line-height: clamp(24px, calc(($LineH / $Width) * 100vw), calc($LineH * 1px));
     letter-spacing: clamp(1.5px, calc((10 / $Width) * 100vw), 10px);
     font-weight: 600;
     font-family: 'Noto Serif', serif;
