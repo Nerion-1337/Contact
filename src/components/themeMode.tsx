@@ -2,15 +2,11 @@ import { useState, useEffect } from "react";
 import { Helmet } from 'react-helmet';
 
 export default function ThemeMode() {
+    localStorage.setItem("themeMode", "dark");
+    localStorage.setItem("favicon", "icon-st-b.svg");
 //  
   const themeModeStorage = localStorage.getItem("themeMode");
   const faviconModeStorage = localStorage.getItem("favicon");
-//
-  if (!themeModeStorage) {
-    localStorage.setItem("themeMode", "dark");
-    localStorage.setItem("favicon", "icon-st-b.svg");
-  }
-//
 //
   const [themeMode, setThemeMode] = useState(`${themeModeStorage}`);
   const [favicon, setFavicon] = useState(`${faviconModeStorage}`);

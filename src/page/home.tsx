@@ -24,7 +24,7 @@ export default function Home() {
     const [boxContacts] = useState(S_thibaut.links.map((item) => (
       <BoxContact key={uuidv4()} data={item} handleClick={handleClick}/>
     )))
-    console.log(home)
+    console.log(home + S_thibaut.nav[0].url)
 
   if (id === S_thibaut.nav[0].url) {
 //
