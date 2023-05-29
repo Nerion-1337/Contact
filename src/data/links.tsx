@@ -14,7 +14,7 @@ export const Typelinks: Record<string, linksType> = {
 export const Links: linksProps[] = [
   {
     label: "home",
-    url: "/Contact/:id",
+    url: "/Contact/",
     type: "intern",
   },
 ];
