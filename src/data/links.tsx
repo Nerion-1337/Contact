@@ -14,7 +14,7 @@ export const Typelinks: Record<string, linksType> = {
 export const Links: linksProps[] = [
   {
     label: "home",
-    url: "/qrcode/mysite/:id",
+    url: "/Contact/:id",
     type: "intern",
   },
 ];
@@ -24,7 +24,7 @@ export const S_thibaut: persoProps  = {
     nav: [
       {
         label: "home",
-        url: "mysite",
+        url: "st",
         type: "intern",
       },
     ],
