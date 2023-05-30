@@ -13,4 +13,4 @@ Project de formation chez OpenClassRoom.
 
 # Visiter
 
-[Voir le Rendu](https://nerion-1337.github.io/Kasa-OCR/](https://nerion-1337.github.io/Contact/)
+[Voir le Rendu](https://nerion-1337.github.io/Contact/)
