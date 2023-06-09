@@ -10,6 +10,7 @@ header{
     height: clamp(100px, calc((200 / $Width) * 100vw), 200px);
     display: flex;
     justify-content: center;
+    transition: .5s;
 }
 header section{
     width: clamp(300px, calc((1600 / $Width) * 100vw), 1600px);
@@ -26,6 +27,7 @@ header section .logo {
     z-index: 1;
     top: clamp(30px, calc((50 / $Width) * 100vw), 50px);
     overflow: hidden;
+    transition: .5s;
 }
 header section .logo::after {
     content: "";
@@ -38,6 +40,7 @@ header section .logo::after {
     inset: clamp(5px, calc((15 / $Width) * 100vw), 15px);
     border-radius: 50%;
     z-index: 2;
+    transition: .5s;
 }
 header section .logo::before {
     content: "";
@@ -45,6 +48,7 @@ header section .logo::before {
     background: linear-gradient(20deg, var(--C2), var(--C7), var(--C7), var(--C2));
     inset: -20px -5px;
     animation: animate 8s linear infinite;
+    transition: .5s;
 }
 @keyframes animate {
     0% {
@@ -69,6 +73,7 @@ main{
     flex-direction: column;
     box-shadow: 0 0 10px var(--C7), 0 0 20px var(--C7);
     padding-bottom: clamp(10px, calc((50 / $Width) * 100vw), 50px);
+    transition: .5s;
 }
 
 main .listContact{

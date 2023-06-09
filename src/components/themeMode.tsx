@@ -6,6 +6,12 @@ export default function ThemeMode() {
   const faviconModeStorage =  localStorage.getItem("favicon");
   //
   //
+  if(!themeModeStorage) {
+     localStorage.setItem("themeMode", "dark");
+     localStorage.setItem("favicon", "icon-st-b.svg");
+  }
+  //
+  //
   const [themeMode, setThemeMode] = useState(`${themeModeStorage}`);
   const [favicon, setFavicon] = useState(`${faviconModeStorage}`);
   //
@@ -17,19 +23,13 @@ export default function ThemeMode() {
   }, [themeMode, favicon]);
   //
   //
-  if(!themeModeStorage) {
-     localStorage.setItem("themeMode", "dark");
-     localStorage.setItem("favicon", "icon-st-b.svg");
-  }
-  //
-  //
   const ThemeModeToggle = () => {
     const themeModeStorage = localStorage.getItem("themeMode");
     if (themeModeStorage === "dark") {
-      setFavicon("icon-st-w.svg");
+      setFavicon("icon-st-w-c02bf0a3.svg");
       setThemeMode(`light`);
     } else {
-      setFavicon("icon-st-b.svg");
+      setFavicon("icon-st-b-a65a4ed3.svg");
       setThemeMode(`dark`);
     }
   };
@@ -41,7 +41,7 @@ export default function ThemeMode() {
         <link
           rel="icon"
           type="image/svg+xml"
-          href={`./src/assets/${favicon}`}
+          href={`./assets/${favicon}`}
         />
       </Helmet>
       <button
