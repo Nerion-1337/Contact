@@ -41,8 +41,8 @@ export const S_thibaut: persoProps  = {
       },
       {
         label: "mail",
-        title: "senechal.thibaut@hotmail.fr",
-        url: "senechal.thibaut@hotmail.fr",
+        title: "nerion.1337.dev@gmail.com",
+        url: "nerion.1337.dev@gmail.com",
         type: "extern",
         icon: { icon: HiMail },
         special: "mail",
@@ -50,8 +50,8 @@ export const S_thibaut: persoProps  = {
       },
       {
         label: "site",
-        title: "senechal-thibaut.netlify.app",
-        url: "https://senechal-thibaut.netlify.app/",
+        title: "https://portfolio-nerion.vercel.app",
+        url: "https://portfolio-nerion.vercel.app",
         type: "extern",
         icon: { icon: TfiWorld },
         infos: "Découvrir",
@@ -70,14 +70,6 @@ export const S_thibaut: persoProps  = {
         url: "https://codepen.io/Nerion1337",
         type: "extern",
         icon: { icon: FiCodepen },
-        infos: "Découvrir",
-      },
-      {
-        label: "insta",
-        title: "personnel_perf",
-        url: "https://www.instagram.com/personnel_perf/",
-        type: "extern",
-        icon: { icon: FiInstagram },
         infos: "Découvrir",
       },
       {
