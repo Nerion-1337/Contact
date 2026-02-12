@@ -41,7 +41,7 @@ const ref = useRef(
               Senechal Thibaut
             </Typo>
             <Typo size="h5" color="C7" transform="maj" className="job">
-              dev-web & d'app js / react
+             FullStack - React / Nodejs
             </Typo>
           </section>
           <section className="listContact">
