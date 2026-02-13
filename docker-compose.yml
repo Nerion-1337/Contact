@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - ${USERPROFILE}/.ssh:/tmp/.ssh-windows:ro
+    ports:
+      - "5175:5173"  # On garde 5175 sur ton navigateur
+    environment:
+      - NODE_ENV=development
+    # On force le port 5173 interne et l'exposition au réseau (0.0.0.0)
+    command: npx vite --host 0.0.0.0 --port 5173

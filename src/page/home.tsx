@@ -18,10 +18,6 @@ export default function Home() {
     setActive(!active);
   };
  
-    // const [boxContacts] = useState(S_thibaut.links.map((item) => (
-    //   <BoxContact key={uuidv4()} data={item} handleClick={handleClick}/>
-    // )))
-
 const ref = useRef(
   (S_thibaut.links.map((item) => (
   <BoxContact key={uuidv4()} data={item} handleClick={handleClick}/>

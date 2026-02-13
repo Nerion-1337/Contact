@@ -1,5 +1,5 @@
 import { linksProps, linksType, persoProps } from "#types/typages";
-import { FiGithub, FiInstagram, FiCodepen } from "react-icons/fi";
+import { FiGithub, FiCodepen } from "react-icons/fi";
 import { FaLinkedinIn, FaPhoneAlt } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 import { TfiWorld } from "react-icons/tfi";
